@@ -226,7 +226,10 @@ class _HomePageState extends State<HomePage> {
       context: context,
       builder: (context) => AlertDialog(
         title: Center(
-          child: Text('Agregar evento'),
+          child: Text(
+            'Agregar evento',
+            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+          ),
         ),
         content: TextField(
           controller: _eventController,
@@ -244,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                 _eventController.clear();
                 Navigator.pop(context);
               },
-              child: Text("Guardar"))
+              child: Text('Guardar'))
         ],
       ),
     );
